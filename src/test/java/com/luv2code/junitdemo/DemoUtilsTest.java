@@ -2,8 +2,7 @@ package com.luv2code.junitdemo;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 class DemoUtilsTest {
     @Test
@@ -16,5 +15,11 @@ class DemoUtilsTest {
     @Test
     void testNullAndNotNull(){
         DemoUtils demoUtils = new DemoUtils();
+
+        String str1 = null;
+        String str2 = "luv2code";
+
+        assertNull(demoUtils.checkNull(str1), "Object should be null");
+        assertNotNull(demoUtils.checkNull(str2), "Object should be null");
     }
 }

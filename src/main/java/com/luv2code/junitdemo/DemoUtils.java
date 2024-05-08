@@ -33,14 +33,14 @@ public class DemoUtils {
         return a * b;
     }
 
-    public String checkNull(Object obj) {
-        return null;
-   /*     if (obj != null) {
+    public Object checkNull(Object obj) {
+
+       if (obj != null) {
             return obj;
         }
         return null;
 
-    */
+
     }
 
     public Boolean isGreater(int n1, int n2) {
