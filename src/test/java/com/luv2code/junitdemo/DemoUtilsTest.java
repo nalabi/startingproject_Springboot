@@ -34,7 +34,24 @@ void setupBeforeEach(){
         assertNotNull(demoUtils.checkNull(str2), "Object should be null");
     }
 
+    @DisplayName("Same and Not Same")
+    @Test
+    void testSameAndNotSame(){
+        System.out.println("Running test: testSameAndNotSame");
 
+        String str = "luv2code";
+        assertSame(demoUtils.getAcademy(), demoUtils.getAcademyDuplicate(), "Object should refere to the same object");
+        assertNotSame(str, demoUtils.getAcademy(), "Object should not refere to the same object");
+    }
+    @DisplayName("True and False")
+    @Test
+    void testTrueFalse(){
+   int gradeOne = 10;
+   int gradeTwo = 5;
+
+   assertTrue(demoUtils.isGreater(gradeOne, gradeTwo), "Object should be true");
+   assertFalse(demoUtils.isGreater(gradeTwo, gradeOne), "Object should not be true");
+    }
 //@AfterEach
 //    void tearDownAfterEAch() {
 //    System.out.println("Tear Down After Each execution");
