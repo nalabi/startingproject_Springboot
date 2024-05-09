@@ -12,23 +12,8 @@ void setupBeforeEach(){
         demoUtils = new DemoUtils();
         System.out.println("Setup Before Each execution");
     }
-@AfterEach
-    void tearDownAfterEAch() {
-    System.out.println("Tear Down After Each execution");
-    System.out.println();
-}
-@BeforeAll
-        static void setupBeforeEachClass(){
-    System.out.println("Setup Before All execution");
-    }
-
-
-    @AfterAll
-    static void tearDownAfterEachClass(){
-        System.out.println("Tear Down After All execution");
-    }
-
     @Test
+    @DisplayName("Equals and Not equals")
     void testEqualsAndNotEquals() {
         System.out.println("Running test: testEqualsAndNotEquals");
 
@@ -37,6 +22,7 @@ void setupBeforeEach(){
     }
 
     @Test
+    @DisplayName("Nulls and not nulls")
     void testNullAndNotNull(){
         System.out.println("Running test: testNullAndNotNull");
 
@@ -47,4 +33,22 @@ void setupBeforeEach(){
         assertNull(demoUtils.checkNull(str1), "Object should be null");
         assertNotNull(demoUtils.checkNull(str2), "Object should be null");
     }
+
+
+//@AfterEach
+//    void tearDownAfterEAch() {
+//    System.out.println("Tear Down After Each execution");
+//    System.out.println();
+//}
+//@BeforeAll
+//        static void setupBeforeEachClass(){
+//    System.out.println("Setup Before All execution");
+//    }
+//
+//
+//    @AfterAll
+//    static void tearDownAfterEachClass(){
+//        System.out.println("Tear Down After All execution");
+//    }
+
 }
