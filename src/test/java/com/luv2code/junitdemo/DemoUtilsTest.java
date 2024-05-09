@@ -52,6 +52,16 @@ void setupBeforeEach(){
    assertTrue(demoUtils.isGreater(gradeOne, gradeTwo), "Object should be true");
    assertFalse(demoUtils.isGreater(gradeTwo, gradeOne), "Object should not be true");
     }
+
+    @DisplayName("Array Equals")
+  @Test
+    void testArrayEqual(){
+        System.out.println("Array Equals");
+
+        String [] stringArray = {"A", "B" , "C"};
+
+        assertArrayEquals(stringArray, demoUtils.getFirstThreeLettersOfAlphabet());
+    }
 //@AfterEach
 //    void tearDownAfterEAch() {
 //    System.out.println("Tear Down After Each execution");
