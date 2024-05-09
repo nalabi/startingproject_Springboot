@@ -2,6 +2,8 @@ package com.luv2code.junitdemo;
 
 import org.junit.jupiter.api.*;
 
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class DemoUtilsTest {
@@ -60,7 +62,21 @@ void setupBeforeEach(){
 
         String [] stringArray = {"A", "B" , "C"};
 
-        assertArrayEquals(stringArray, demoUtils.getFirstThreeLettersOfAlphabet());
+        assertArrayEquals(stringArray, demoUtils.getFirstThreeLettersOfAlphabet(), "Arrays should be the same.");
+    }
+
+    @DisplayName("Test Iterable Equals")
+    @Test
+    void testIterablequals(){
+       List<String> theList = List.of("luv", "2", "code");
+       assertIterableEquals(theList, demoUtils.getAcademyInList());
+    }
+
+    @DisplayName("Test Lines Match")
+    @Test
+    void testLinesMatch(){
+        List<String> theList = List.of("luv", "2", "code");
+        assertLinesMatch(theList, demoUtils.getAcademyInList());
     }
 //@AfterEach
 //    void tearDownAfterEAch() {
