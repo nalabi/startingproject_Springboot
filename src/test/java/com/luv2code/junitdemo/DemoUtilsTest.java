@@ -78,6 +78,13 @@ void setupBeforeEach(){
         List<String> theList = List.of("luv", "2", "code");
         assertLinesMatch(theList, demoUtils.getAcademyInList());
     }
+
+    @DisplayName("Test Throw and Does Not Throw")
+    @Test
+    void testThrowsandDoesNotThrowException(){
+
+
+    }
 //@AfterEach
 //    void tearDownAfterEAch() {
 //    System.out.println("Tear Down After Each execution");
